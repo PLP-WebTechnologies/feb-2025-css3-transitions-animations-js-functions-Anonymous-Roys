@@ -86,9 +86,9 @@ const AnimationStudio = {
     // Sound Management
     setupSounds() {
         this.sounds = {
-            bell: new Audio('https://www.soundjay.com/button/sounds/button-09.mp3'),
-            pop: new Audio('https://www.soundjay.com/button/sounds/button-10.mp3'),
-            drum: new Audio('https://www.soundjay.com/button/sounds/button-12.mp3')
+            bell: new Audio('./bell.wav'),
+            pop: new Audio('./pop.wav'),
+            drum: new Audio('./drum.wav')
         };
     },
 
@@ -292,5 +292,5 @@ window.addEventListener('load', () => {
 // Error Handling
 window.addEventListener('error', (event) => {
     console.error('Uncaught error:', event.error);
-    // Optional: Send error to monitoring service
+    
 });
