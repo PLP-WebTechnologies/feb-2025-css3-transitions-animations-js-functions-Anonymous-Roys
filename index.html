@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animations Playground</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌈 Interactive Animations Studio</h1>
+            <nav>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌞</span>
+                </button>
+            </nav>
+        </header>
+
+        <section class="preferences-panel">
+            <h2>User Preferences</h2>
+            <div class="preference-controls">
+                <div class="color-picker">
+                    <label for="accentColor">Accent Color:</label>
+                    <input type="color" id="accentColor" value="#3498db">
+                </div>
+                <div class="animation-speed">
+                    <label for="animationSpeed">Animation Speed:</label>
+                    <input type="range" id="animationSpeed" min="0.5" max="2" step="0.1" value="1">
+                    <span id="speedValue">1x</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="animation-showcase">
+            <h2>Animation Playground</h2>
+            <div class="animation-grid">
+                <div class="animation-card" id="cardTransform">
+                    <h3>Transform Animation</h3>
+                    <div class="animation-content">
+                        <div class="transform-box"></div>
+                    </div>
+                </div>
+
+                <div class="animation-card" id="cardKeyframe">
+                    <h3>Keyframe Animation</h3>
+                    <div class="animation-content">
+                        <div class="keyframe-circle"></div>
+                    </div>
+                </div>
+
+                <div class="animation-card" id="cardTransition">
+                    <h3>Transition Magic</h3>
+                    <div class="animation-content">
+                        <button class="transition-button">Hover Me!</button>
+                    </div>
+                </div>
+
+                <div class="animation-card" id="cardStagger">
+                    <h3>Stagger Animation</h3>
+                    <div class="animation-content stagger-container">
+                        <div class="stagger-item"></div>
+                        <div class="stagger-item"></div>
+                        <div class="stagger-item"></div>
+                        <div class="stagger-item"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-canvas">
+            <h2>Interactive Drawing Canvas</h2>
+            <div class="canvas-controls">
+                <input type="color" id="brushColor" value="#000000">
+                <input type="range" id="brushSize" min="1" max="50" value="5">
+                <button id="clearCanvas">Clear Canvas</button>
+            </div>
+            <canvas id="drawingCanvas" width="800" height="400"></canvas>
+        </section>
+
+        <section class="animation-triggers">
+            <h2>Animation Triggers</h2>
+            <div class="trigger-buttons">
+                <button id="shakeButton">Shake Animation</button>
+                <button id="pulseButton">Pulse Animation</button>
+                <button id="rotateButton">Rotate Animation</button>
+            </div>
+            <div id="animationTarget" class="animation-target">
+                Target Element
+            </div>
+        </section>
+
+        <section class="sound-playground">
+            <h2>Sound & Animation</h2>
+            <div class="sound-controls">
+                <button id="playSound">Play Sound</button>
+                <button id="stopSound">Stop Sound</button>
+                <select id="soundSelector">
+                    <option value="bell">Bell</option>
+                    <option value="pop">Pop</option>
+                    <option value="drum">Drum</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="performance-monitor">
+            <h2>Performance Monitor</h2>
+            <div id="performanceStats">
+                <p>Animations Triggered: <span id="animationCount">0</span></p>
+                <p>Last Animation Type: <span id="lastAnimationType">None</span></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>🚀 Interactive Animations Studio © 2025</p>
+        </footer>
+    </div>
+
+    <div class="modal" id="welcomeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Welcome to Animations Studio!</h2>
+            <p>Explore interactive animations, customize your experience, and have fun!</p>
+            <button id="startExploring">Start Exploring</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
