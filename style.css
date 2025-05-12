@@ -1,0 +1,282 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --transition-speed: 0.3s;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --primary-color: #2980b9;
+    --secondary-color: #27ae60;
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* Preferences Panel */
+.preferences-panel {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.preference-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Animation Showcase */
+.animation-showcase {
+    margin-bottom: 30px;
+}
+
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.animation-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.animation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Transform Animation */
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.transform-box:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* Keyframe Animation */
+@keyframes circleAnimation {
+    0% { transform: scale(0.5) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+.keyframe-circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: circleAnimation 2s infinite;
+}
+
+/* Transition Button */
+.transition-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 
+        background-color var(--transition-speed),
+        transform var(--transition-speed);
+}
+
+.transition-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Stagger Animation */
+.stagger-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.stagger-item {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+}
+
+/* Animations for Triggers */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animation-target {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.shake-animation {
+    animation: shake 0.5s;
+}
+
+.pulse-animation {
+    animation: pulse 0.7s;
+}
+
+.rotate-animation {
+    animation: rotate 1s linear;
+}
+
+/* Interactive Canvas */
+.interactive-canvas {
+    margin-bottom: 30px;
+}
+
+#drawingCanvas {
+    border: 2px solid var(--primary-color);
+    background-color: white;
+}
+
+/* Sound Playground */
+.sound-playground {
+    background-color: rgba(46, 204, 113, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Performance Monitor */
+.performance-monitor {
+    margin-top: 30px;
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal {
+    color: var(--text-color);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .animation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preference-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #drawingCanvas {
+        width: 100%;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
